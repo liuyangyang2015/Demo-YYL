@@ -8,6 +8,7 @@
 
 	<modules>
 		<module>jaxb</module>
+		<module>javaStack</module>
 	</modules>
 	
 	<properties>
