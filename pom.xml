@@ -9,6 +9,8 @@
 	<modules>
 		<module>jaxb</module>
 		<module>javaStack</module>
+		<module>javaHeap</module>
+		<module>httpclient</module>
 	</modules>
 	
 	<properties>

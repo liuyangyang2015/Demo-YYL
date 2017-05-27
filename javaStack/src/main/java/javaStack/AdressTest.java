@@ -15,7 +15,13 @@ public class AdressTest {
          System.out.println( a.getClass().getName() + "@" + Integer.toHexString(a.hashCode()));
          
 	     Object a2  = new Object();
-         System.out.println(a2.toString());       
+         System.out.println(a2.toString());   
+         
+         String[] str = new String[] { "1", "2", "3", "4", "5", "5" };
+	     System.out.println(str);
+	     System.out.println(str.toString()+" "+Integer.toHexString(str.hashCode()));
+         System.out.println(str.getClass()+"@"+str.hashCode());
+         System.out.println(str.getClass().getName() + "@" + Integer.toHexString(str.hashCode()));
 	}
 
 }
