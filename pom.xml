@@ -11,6 +11,7 @@
 		<module>javaStack</module>
 		<module>javaHeap</module>
 		<module>httpclient</module>
+		<module>demo</module>
 	</modules>
 	
 	<properties>
