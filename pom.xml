@@ -12,6 +12,7 @@
 		<module>javaHeap</module>
 		<module>httpclient</module>
 		<module>demo</module>
+		<module>designPatterns</module>
 	</modules>
 	
 	<properties>
