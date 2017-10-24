@@ -11,7 +11,7 @@
 		<module>javaStack</module>
 		<module>javaHeap</module>
 		<module>httpclient</module>
-		<module>demo</module>
+		<!--<module>demo</module>-->
 		<module>designPatterns</module>
 		<module>freemarkerDemo</module>
 	</modules>
