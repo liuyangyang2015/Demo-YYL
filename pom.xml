@@ -15,7 +15,10 @@
 		<module>designPatterns</module>
 		<module>freemarkerDemo</module>
 		<module>thread</module>
-	</modules>
+        <module>springAOP</module>
+        <module>quartz</module>
+        <module>socket</module>
+    </modules>
 	
 	<properties>
 		<java.version>1.8</java.version>
