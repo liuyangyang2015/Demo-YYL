@@ -40,6 +40,7 @@ public class Server
             //5.发送数据
             byte[] buf = new byte[1024];
             int len = 0;
+            out.write("hello destiny ! **==**".getBytes());
             while ((len = in.read(buf)) != -1)
             {
                 out.write(buf, 0, len);
