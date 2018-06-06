@@ -18,6 +18,9 @@
         <module>springAOP</module>
         <module>quartz</module>
         <module>socket</module>
+		<module>java8</module>
+		<module>rmi</module>
+        <module>fenbushi</module>
     </modules>
 	
 	<properties>
