@@ -11,8 +11,8 @@ import java.util.concurrent.CountDownLatch;
  **/
 public class CreateGroup implements Watcher
 {
-    private static final int SESSION_TIMEOUT = 5000;
-    private ZooKeeper zk;
+    private static final int SESSION_TIMEOUT = 50000;
+    protected ZooKeeper zk;
     private CountDownLatch connectedSignal = new CountDownLatch(1);
     public void connect(String hosts) throws IOException, InterruptedException {
         zk = new ZooKeeper(hosts, SESSION_TIMEOUT, this);
