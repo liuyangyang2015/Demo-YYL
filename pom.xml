@@ -21,6 +21,7 @@
 		<module>java8</module>
 		<module>rmi</module>
         <module>fenbushi</module>
+        <module>nio</module>
     </modules>
 	
 	<properties>

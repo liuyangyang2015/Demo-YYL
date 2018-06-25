@@ -1,5 +1,6 @@
 package com.gupao.vip.michael;
 
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.rmi.AlreadyBoundException;
 import java.rmi.Naming;
@@ -13,7 +14,8 @@ import java.rmi.registry.LocateRegistry;
  */
 public class HelloServer {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException
+    {
         try {
             ISayHello hello=new SayHelloImpl();
 
@@ -21,7 +23,8 @@ public class HelloServer {
 
             Naming.bind("rmi://localhost:8888/sayHello",hello);
 
-            System.out.println("server start success");
+            System.out.println("server start success111");
+//            System.in.read();
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (MalformedURLException e) {

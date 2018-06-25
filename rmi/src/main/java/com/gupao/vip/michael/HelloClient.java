@@ -14,7 +14,9 @@ public class HelloClient {
 
     public static void main(String[] args) {
         try {
-            ISayHello hello=(ISayHello) Naming.lookup("rmi://118.126.102.123:8888/sayHello");
+//            ISayHello hello=(ISayHello) Naming.lookup("rmi://118.126.102.123:8888/sayHello");
+            ISayHello hello=(ISayHello) Naming.lookup("rmi://localhost:8888/sayHello");
+
             System.out.println(hello);
             System.out.println(hello.sayHello("CentOS !"));
         } catch (NotBoundException e) {
