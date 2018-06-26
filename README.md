@@ -1,2 +1,3 @@
 # applicationDemos
-some demos   for  something  about  java 
+##### Some demos   for  something  about  java 
+##### It will be a practice playground for Java !

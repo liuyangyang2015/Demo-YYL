@@ -1,0 +1,44 @@
+DEMO
+
+<!--  <servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>com.spring.with.HelloWorld</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping> -->
+	
+	
+	
+	 
+ <!--  <listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener> -->
+	
+	 <!-- <context:annotation-config /> -->
+   <!--  <context:component-scan base-package="com.liuyy.demo.spring" />
+    <mvc:annotation-driven /> -->
+   <!--  <bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/> -->
+	<!-- <bean id="aBean" class="com.liuyy.demo.spring.A">
+		
+	</bean>
+	<bean id="bBean" class="com.liuyy.demo.spring.B" />
+	<bean id="cBean" class="com.liuyy.demo.spring.C" /> -->
+
+
+    <!-- <bean id="aBean" class="com.liuyy.demo.spring.A">
+		
+	</bean>
+	<bean id="bBean" class="com.liuyy.demo.spring.B" />springServlet-servlet.xml
+	<bean id="cBean" class="com.liuyy.demo.spring.C" /> -->
+	<!-- <bean id="dBean" class="com.liuyy.demo.spring.D" /> -->
+	
+
+	<!-- <bean id="aBean" class="com.liuyy.demo.spring.A"> <property name="bbb" 
+		ref="bBean" /> <property name="ccc" ref="cBean" /> </bean> <bean id="bBean" 
+		class="com.liuyy.demo.spring.B" /> <bean id="cBean" class="com.liuyy.demo.spring.C" 
+		/> -->
+		
+		/* @WebServlet("/hello") */
