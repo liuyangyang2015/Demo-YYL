@@ -31,4 +31,10 @@ public class InitializingBeanTest
 //        Object object1 = beanFactory.getBean("&lombok");
 //        System.out.println(object1);
     }
+
+    public static void main2(String[] args) throws IOException
+    {
+        LombokDemo lombokDemo = new LombokDemo();
+        System.out.println(lombokDemo.getName());
+    }
 }

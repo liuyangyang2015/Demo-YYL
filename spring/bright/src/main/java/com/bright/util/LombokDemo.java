@@ -12,24 +12,24 @@ import org.springframework.beans.factory.InitializingBean;
  * @author liuyangyang
  * @create 2018-04-26 17:23
  **/
-@Data
-@EqualsAndHashCode
-@ToString
+//@Data
+//@EqualsAndHashCode
+//@ToString
 //@Getter
 //@Setter
 @Log
 public class LombokDemo extends OrderDemo implements InitializingBean
 {
-    public static String flag= "this is lombok demo , it is a test class";// static field
+    public static String flag= "this is lombok demo , it is a test class";// static field   33333333333333333333
 
     static {
         System.out.println("44444444444444444444444444444444444");
         System.out.println("it is executing STATIC {} CODE ！");
     }
-    private String name="LombokDemo";
+    private String name="LombokDemo";//8888888888888888888888888
 
     {
-        System.out.println(" 8888888888888888888");
+        System.out.println(" 99999999999999999999999999");
         System.out.println(" exeting children {} code !");
     }
 
@@ -42,6 +42,7 @@ public class LombokDemo extends OrderDemo implements InitializingBean
     public void afterPropertiesSet() throws Exception
     {
 
+        System.out.println("%%%%%%%%%%%%%%%%%%%%%");
         System.out.println(this.name+"=======");
         this.name = "1111";
         System.out.println(this.name+"=======");
@@ -56,5 +57,27 @@ public class LombokDemo extends OrderDemo implements InitializingBean
     public static void main(String[] args)
     {
         log.info("hi,lombok");
+    }
+
+    public static String getFlag()
+    {
+        return flag;
+    }
+
+    public static void setFlag(String flag)
+    {
+        LombokDemo.flag = flag;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public void setName(String name)
+    {
+        System.out.println(name);
+        this.name = name;
+        System.out.println(name);
     }
 }
