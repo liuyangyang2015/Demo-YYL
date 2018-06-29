@@ -15,6 +15,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import com.panda.demo.jmsdemo.utils.JMSUtil;
+import org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory;
 
 /**
  * 发送方。无论是消息队列的Queue还是Pub/Sub模式的 Topic,
@@ -31,7 +32,8 @@ public class JMSSender {
 		Connection connection = null;
 		try {
 			context = JMSUtil.getInitialContext();
-			ConnectionFactory factory = (ConnectionFactory) context.lookup(JMSUtil.JMS_CONNECTION_FACTORY_JNDI);
+			ConnectionFactory factory= new ActiveMQConnectionFactory();
+//			ConnectionFactory factory = (ConnectionFactory) context.lookup(JMSUtil.JMS_CONNECTION_FACTORY_JNDI);
 			connection = factory.createConnection(JMSUtil.JMS_USERNAME, JMSUtil.JMS_PASSWORD);
 			Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 			Destination destination = (Destination) context.lookup(JMSUtil.JMS_TOPIC_JNDI);

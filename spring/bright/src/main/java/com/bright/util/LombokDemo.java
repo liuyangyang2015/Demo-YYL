@@ -5,6 +5,12 @@ import jdk.nashorn.internal.objects.annotations.Setter;
 import lombok.*;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+
+import javax.annotation.PostConstruct;
+import javax.ejb.Init;
+import java.util.Properties;
 
 /**
  * 描述：
@@ -20,6 +26,22 @@ import org.springframework.beans.factory.InitializingBean;
 @Log
 public class LombokDemo extends OrderDemo implements InitializingBean
 {
+    @Autowired
+    private Properties  property;
+
+    @Value("${test}")
+    public String test;
+
+    public String getTest()
+    {
+        return test;
+    }
+
+    public void setTest(String test)
+    {
+        this.test = test;
+    }
+
     public static String flag= "this is lombok demo , it is a test class";// static field   33333333333333333333
 
     static {
@@ -42,10 +64,15 @@ public class LombokDemo extends OrderDemo implements InitializingBean
     public void afterPropertiesSet() throws Exception
     {
 
-        System.out.println("%%%%%%%%%%%%%%%%%%%%%");
+        System.out.println("afterPropertiesSet");
         System.out.println(this.name+"=======");
         this.name = "1111";
         System.out.println(this.name+"=======");
+    }
+    public void init()
+    {
+        System.out.println("init");
+        System.out.println("chu shi hua111");
     }
 
     /**
@@ -79,5 +106,12 @@ public class LombokDemo extends OrderDemo implements InitializingBean
         System.out.println(name);
         this.name = name;
         System.out.println(name);
+    }
+
+    @PostConstruct
+    public  void mile()
+    {
+        System.out.println("this is a PostConstruct method");
+        System.out.println("this is a PostConstruct method");
     }
 }
