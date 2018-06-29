@@ -19,7 +19,7 @@
     <!--</bean>-->
     <!--<bean id="ParentBean" class="com.bright.util.ParentBean" >-->
     <!--</bean>-->
-    <bean id="sonBean" class="com.bright.util.SonBean" lazy-init="true">
+    <bean id="sonBean" class="com.bright.util.SonBean" >
     </bean>
     <!--<bean id="property" class="org.springframework.beans.factory.config.PropertiesFactoryBean">-->
         <!--<property name="locations">-->
