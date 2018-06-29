@@ -1,0 +1,21 @@
+velocity
+
+@Controller
+
+@RequestMapping("/test")
+//这里也可以写成@RequestMapping("/test.do")也可以不写，因为在web.xml中配置了*.do
+method 若是缺省没指定，并不是说它默认只处理 GET 方式的请求，而是它可以处理任何方式的 http method 类型的请求。
+指定 method 是为了细化映射 ( 缩小处理方法的映射范围 )，在 method 没有指定的情况下，它的映射范围是最大的。
+
+http://jsoneditoronline.org/
+
+http://blog.csdn.net/LXHZX/article/details/53332196
+rm -rf ./.git/index.lock
+原因分析：一般是同一个用户在不同的终端，同时登录导致某个终端对index文件进行加锁。
+解决方法：rm -rf /path/my_proj/.git/index.lock 然后重新提交即可
+Intellij IDEA 配置 Code Style
+https://maimieng.com/2016/23/
+servlet单实例多线程模式
+http://kakajw.iteye.com/blog/920839
+@RequestMapping 用法详解之地址映射
+http://blog.csdn.net/walkerjong/article/details/7994326
