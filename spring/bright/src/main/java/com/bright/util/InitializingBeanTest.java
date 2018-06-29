@@ -24,9 +24,10 @@ public class InitializingBeanTest
     public static void main(String[] args) throws IOException
     {
 //        Resource resource = new FileSystemResource("C:/beans.xml");
-        Resource resource1 = new ClassPathResource("beans.xml");
+//        Resource resource1 = new ClassPathResource("beans.xml");
 //        BeanFactory beanFactory = new FileSystemXmlApplicationContext("C:/beans.xml");
-//        ApplicationContext beanFactory = new ClassPathXmlApplicationContext("beans.xml");
+        ApplicationContext beanFactory = new ClassPathXmlApplicationContext("beans2.xml");
+//        beanFactory.getBean("sonBean");
 //        BeanFactory beanFactory = new XmlBeanFactory(resource1);
 //        LombokDemo lombokDemo = (LombokDemo) beanFactory.getBean("lombok");
 //        System.out.println("hi, " + lombokDemo.getTest());

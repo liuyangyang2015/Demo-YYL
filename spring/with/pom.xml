@@ -8,11 +8,18 @@
 		<!-- <relativePath>../pom.xml</relativePath> -->
 	</parent>
 
-	<artifactId>without</artifactId>
+	<artifactId>with</artifactId>
 	<packaging>war</packaging>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	</dependencies>
+
 	
 	<build>
-	<finalName>spring</finalName>
+	<finalName>with</finalName>
 	</build>
 	
 </project>
