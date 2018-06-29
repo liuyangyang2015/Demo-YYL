@@ -26,11 +26,11 @@ public class InitializingBeanTest
 //        Resource resource = new FileSystemResource("C:/beans.xml");
         Resource resource1 = new ClassPathResource("beans.xml");
 //        BeanFactory beanFactory = new FileSystemXmlApplicationContext("C:/beans.xml");
-        ApplicationContext beanFactory = new ClassPathXmlApplicationContext("beans.xml");
+//        ApplicationContext beanFactory = new ClassPathXmlApplicationContext("beans.xml");
 //        BeanFactory beanFactory = new XmlBeanFactory(resource1);
 //        LombokDemo lombokDemo = (LombokDemo) beanFactory.getBean("lombok");
 //        System.out.println("hi, " + lombokDemo.getTest());
-
+        System.out.println("hi,1 ");
 //        Exception in thread "main" org.springframework.beans.factory.BeanIsNotAFactoryException: Bean named 'lombok' is expected to be of type 'org.springframework.beans.factory.FactoryBean' but was actually of type 'com.bright.util.LombokDemo'
 //        Object object1 = beanFactory.getBean("&lombok");
 //        System.out.println(object1);
