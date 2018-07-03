@@ -2,7 +2,9 @@ package com.bigroad.springbootdemo.dao;
 
 import com.bigroad.springbootdemo.domain.ChangeApplication;
 import com.bigroad.springbootdemo.domain.ChangeApplicationExample;
+
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface ChangeApplicationMapper {
