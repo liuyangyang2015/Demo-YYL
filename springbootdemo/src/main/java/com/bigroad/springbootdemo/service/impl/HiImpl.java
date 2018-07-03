@@ -1,8 +1,9 @@
-package com.bigroad.springbootdemo.service.imple;
+package com.bigroad.springbootdemo.service.impl;
 
 import com.bigroad.springbootdemo.service.Hi;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Async;
-import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.stereotype.Service;
 
 /**
@@ -14,10 +15,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class HiImpl implements Hi
 {
+    private static final Logger logger = LoggerFactory.getLogger(HiImpl.class);
+
     @Override
     @Async
     public void say()
     {
-        System.out.println("hihi");
+        System.out.println("controller#async task started. Thread: " +Thread.currentThread().getName());
+        logger.info("test demo1");
+        System.out.println("hello world !");
+        logger.info("test demo2");
+
     }
 }

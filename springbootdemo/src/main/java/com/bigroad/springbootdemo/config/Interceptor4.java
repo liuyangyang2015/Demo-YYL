@@ -1,6 +1,7 @@
 package com.bigroad.springbootdemo.config;
 
-import org.springframework.web.servlet.HandlerInterceptor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
@@ -13,8 +14,8 @@ import javax.servlet.http.HttpServletResponse;
  * @author liuyangyang
  * @create 2018-07-02 19:01
  **/
-public class Interceptor4 extends HandlerInterceptorAdapter
-{
+public class Interceptor4 extends HandlerInterceptorAdapter {
+    private static final Logger logger = LoggerFactory.getLogger(Interceptor4.class);
 
     /**
      * 预处理回调方法，实现处理器的预处理（如检查登陆），第三个参数为响应的处理器，自定义Controller
@@ -23,7 +24,7 @@ public class Interceptor4 extends HandlerInterceptorAdapter
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        System.out.println("==========================================preHandle4================================================");
+        System.out.println(Thread.currentThread().getName() + "=====preHandle4============");
         return true;
     }
 
@@ -33,7 +34,7 @@ public class Interceptor4 extends HandlerInterceptorAdapter
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
                            ModelAndView modelAndView) throws Exception {
-        System.out.println("==========================================post4================================================");
+        System.out.println(Thread.currentThread().getName()+"========post4==========");
     }
 
     /**
@@ -42,14 +43,17 @@ public class Interceptor4 extends HandlerInterceptorAdapter
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
             throws Exception {
-        System.out.println("==========================================after4================================================");
+        System.out.println(Thread.currentThread().getName()+"==========after4=============");
     }
 
     @Override
     public void afterConcurrentHandlingStarted(
             HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        System.out.println("==========================================afterConcurrentHandlingStarted================================================");
+
+        System.out.println(Thread.currentThread().getName()+"====afterConcurrentHandlingStarted");
+        logger.info("ConcurrentHandling2");
+        System.out.println("controller#async task started. Thread: " +  Thread.currentThread().getName());
     }
 
 }

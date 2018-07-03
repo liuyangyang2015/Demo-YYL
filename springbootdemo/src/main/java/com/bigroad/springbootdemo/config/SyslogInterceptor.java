@@ -1,6 +1,5 @@
 package com.bigroad.springbootdemo.config;
 
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -13,8 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author liuyangyang
  * @create 2018-07-02 19:01
  **/
-public class SyslogInterceptor implements HandlerInterceptor
-{
+public class SyslogInterceptor implements HandlerInterceptor {
 
     /**
      * 预处理回调方法，实现处理器的预处理（如检查登陆），第三个参数为响应的处理器，自定义Controller
@@ -23,8 +21,8 @@ public class SyslogInterceptor implements HandlerInterceptor
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        System.out.println("==========================================preHandle1================================================");
-        return false;
+        System.out.println(Thread.currentThread().getName() + "=========preHandle1================");
+        return true;
     }
 
     /**
@@ -33,7 +31,7 @@ public class SyslogInterceptor implements HandlerInterceptor
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
                            ModelAndView modelAndView) throws Exception {
-        System.out.println("==========================================post1================================================");
+        System.out.println(Thread.currentThread().getName() +"=================post1==============");
     }
 
     /**
@@ -42,7 +40,7 @@ public class SyslogInterceptor implements HandlerInterceptor
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
             throws Exception {
-        System.out.println("==========================================after1================================================");
+        System.out.println(Thread.currentThread().getName() +"==========after1====================");
     }
 
 }
