@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
  * @author liuyangyang
  * @create 2018-07-02 19:01
  **/
-@Component
 public class SyslogInterceptor implements HandlerInterceptor
 {
 
@@ -25,7 +24,7 @@ public class SyslogInterceptor implements HandlerInterceptor
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         System.out.println("==========================================preHandle1================================================");
-        return true;
+        return false;
     }
 
     /**

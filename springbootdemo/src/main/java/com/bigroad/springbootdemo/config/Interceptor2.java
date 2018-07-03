@@ -13,8 +13,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author liuyangyang
  * @create 2018-07-02 19:01
  **/
-@Component
-public class SyslogInterceptor implements HandlerInterceptor
+public class Interceptor2 implements HandlerInterceptor
 {
 
     /**
@@ -24,7 +23,7 @@ public class SyslogInterceptor implements HandlerInterceptor
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
-        System.out.println("==========================================preHandle1================================================");
+        System.out.println("==========================================preHandle2================================================");
         return true;
     }
 
@@ -34,7 +33,7 @@ public class SyslogInterceptor implements HandlerInterceptor
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler,
                            ModelAndView modelAndView) throws Exception {
-        System.out.println("==========================================post1================================================");
+        System.out.println("==========================================post2================================================");
     }
 
     /**
@@ -43,7 +42,7 @@ public class SyslogInterceptor implements HandlerInterceptor
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)
             throws Exception {
-        System.out.println("==========================================after1================================================");
+        System.out.println("==========================================after2================================================");
     }
 
 }

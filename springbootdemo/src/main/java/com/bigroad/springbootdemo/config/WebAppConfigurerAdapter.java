@@ -11,8 +11,9 @@ public class WebAppConfigurerAdapter extends WebMvcConfigurerAdapter
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new SyslogInterceptor())
-                .addPathPatterns("/**")
-                .excludePathPatterns("/api/**", "/error");
+        registry.addInterceptor(new SyslogInterceptor()).addPathPatterns("/**").excludePathPatterns("/api/**", "/error");
+        registry.addInterceptor(new Interceptor2()).addPathPatterns("/**").excludePathPatterns("/api/**", "/error");
+        registry.addInterceptor(new Interceptor3()).addPathPatterns("/**").excludePathPatterns("/api/**", "/error");
+        registry.addInterceptor(new Interceptor4()).addPathPatterns("/**").excludePathPatterns("/api/**", "/error");
     }
 }

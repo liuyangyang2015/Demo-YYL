@@ -1,4 +1,4 @@
-package com.bigroad.springbootdemo.service.impl;
+package com.bigroad.springbootdemo.service;
 
 /**
  * 描述：
@@ -6,6 +6,7 @@ package com.bigroad.springbootdemo.service.impl;
  * @author liuyangyang
  * @create 2018-07-03 16:25
  **/
-public class Hi
+public interface Hi
 {
+    void say();
 }
