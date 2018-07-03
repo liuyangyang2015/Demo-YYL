@@ -1,7 +1,7 @@
 package com.bigroad.springbootdemo.dao;
 
-import com.bigroad.springbootdemo.domain.ChangeApplication;
 import com.bigroad.springbootdemo.domain.ChangeApplicationExample;
+import com.bigroad.springbootdemo.domain.ChangeApplication;
 
 import java.util.List;
 
