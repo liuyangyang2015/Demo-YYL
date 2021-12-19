@@ -1,7 +1,6 @@
-package com.demo.thread;
+package com.demo.thread.start;
 
 import java.util.Random;
-import java.util.Set;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;

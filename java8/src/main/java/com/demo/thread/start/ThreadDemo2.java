@@ -1,4 +1,4 @@
-package com.demo.thread;
+package com.demo.thread.start;
 
 import java.util.Random;
 import java.util.Set;
