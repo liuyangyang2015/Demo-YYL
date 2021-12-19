@@ -1,6 +1,11 @@
 package com.demo.thread;
 
+import java.util.Random;
 import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * @author jack.l
@@ -9,13 +14,25 @@ import java.util.Set;
  * <p>
  * Thread    (runnable)   extend Thread
  * 本质上只有一种实现线程的方式
+ * new Thread(runnable) Runnable
+ * extends Thread
+ * ThreadGroup
+ * DefaultThreadFactory
+ * <p>
+ * Callable
+ * 线程之间不相互影响
  */
-public class ThreadDemo {
+public class ThreadDemo2 {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         Thread t1 = new Thread(() -> {
-
+            try {
+                Thread.sleep(3000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+           // int a = 10/0;
             System.out.println("start sleep...");
             try {
                 Thread.sleep(10000);
@@ -34,13 +51,13 @@ public class ThreadDemo {
 
                             + currentThread.getId() + " " + currentThread.getName() + "  "
                             + currentThread.isDaemon() + "  "
-                            + currentThread.isAlive()+ "  "+currentThread.getState()
+                            + currentThread.isAlive() + "  " + currentThread.getState() + "  " + currentThread.getPriority()
             );
             Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
             for (Thread t : threadSet
             ) {
                 System.out.println(
-                        (t.getThreadGroup().getParent() == null ? null+"  " : t.getThreadGroup().getParent().getName())+ " || "
+                        (t.getThreadGroup().getParent() == null ? null + "  " : t.getThreadGroup().getParent().getName()) + " || "
 
                                 + t.getThreadGroup().getName() + "  "
                                 + t.getThreadGroup().isDaemon() + "  "
@@ -48,13 +65,14 @@ public class ThreadDemo {
 
                                 + t.getId() + " " + t.getName() + "  "
                                 + t.isDaemon() + "  "
-                                + t.isAlive()+ "  " +t.getState()+ "  " +t.getPriority()
+                                + t.isAlive() + "  " + t.getState() + "  " + t.getPriority()
                 );
             }
         });
         //Thread.currentThread().setDaemon(true);
-        t1.setDaemon(true);
+//        t1.setDaemon(true);
         t1.start();
+//        t1.run();
 
         System.out.println("init...");
         Thread currentThread = Thread.currentThread();
@@ -67,10 +85,11 @@ public class ThreadDemo {
 
                         + currentThread.getId() + " " + currentThread.getName() + "  "
                         + currentThread.isDaemon() + "  "
-                        + currentThread.isAlive()+ "  " +currentThread.getState()+ "  " +currentThread.getPriority()
+                        + currentThread.isAlive() + "  " + currentThread.getState() + "  " + currentThread.getPriority()
         );
-
-
+        int a = 10/0;
+        Thread.sleep(5000);
+        System.out.println("exception...");
     }
 
 }
