@@ -87,7 +87,7 @@ public class ThreadDemo2 {
                         + currentThread.isDaemon() + "  "
                         + currentThread.isAlive() + "  " + currentThread.getState() + "  " + currentThread.getPriority()
         );
-        int a = 10/0;
+//        int a = 10/0;
         Thread.sleep(5000);
         System.out.println("exception...");
     }
