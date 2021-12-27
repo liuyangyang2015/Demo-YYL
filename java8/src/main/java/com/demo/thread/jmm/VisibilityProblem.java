@@ -30,6 +30,7 @@ public class VisibilityProblem {
     private void print() {
 
         System.out.println("b=" + b + ";a=" + a);
+//        System.out.println(ClassLayout.parseInstance(t).toPrintable());
 
     }
 
